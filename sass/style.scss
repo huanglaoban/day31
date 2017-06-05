@@ -1,0 +1,93 @@
+$bgcolor : #872347;
+$frontcolor : #18273a;
+$width : 1200px;
+
+#container {
+	background: $bgcolor;
+	color: $frontcolor;
+	width: $width / 15;
+}
+
+.header {
+	background: $bgcolor;
+	width: $width * 0.8;
+}
+
+.footer {
+	color: $frontcolor;
+}
+
+.nav {
+	color: $frontcolor;
+}
+
+.container {
+	width: $width / 5;
+	height : 370px;
+	background : red;
+
+	ul {
+		width: $width / 6;
+		height : 300px;
+		list-style : none;
+		clear: both;
+		li {
+			float:left;
+			width: 200px;
+		}
+	}
+}
+
+a {
+	&:hover {color: red;}
+	&:visited {color: blue;}
+}
+
+.bg {
+	background: {
+		color: $bgcolor;
+		image: url();
+		repeat: no-repeat;
+		position: 0 0;
+	}
+}
+
+@mixin repeat($height: 40px) {
+	width: $width / 20;
+	height: $height;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+p {
+	@include repeat(50px);
+	color : blue;
+	display : none;
+}
+
+div.p {
+	@include repeat(100px);
+	color: red;
+	display: inline-block;
+}
+
+ul {
+	@include repeat;
+	color: green;
+}
+
+p.ext {
+	@extend p;
+	font-weight: bold;
+}
+
+p.another {
+	@if $width / 5 > 200px {bordor:1px solid;}
+	@else {border:10px solid;}
+}
+
+@for $i from 1 through  10 {
+	.pad-#{$i} {
+		padding: #{$i}px;
+	}
+}
