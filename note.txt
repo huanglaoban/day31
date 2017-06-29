@@ -108,7 +108,7 @@ Git使用：
 		"Create a new repository"
 		输入版本库名称及描述后，创建
 	6. 配置本地版本库 -- 关联
-		git remote add origin git@github.com:huanglaoban/17-06-05.git
+		git remote add origin git@github.com:huanglaoban/day-27.git
 	7. 推送本地仓库到远程仓库
 		git push -u origin master
 
